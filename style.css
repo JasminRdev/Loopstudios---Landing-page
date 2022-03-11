@@ -1,0 +1,487 @@
+/* font-family: 'Alata', sans-serif;
+font-family: 'Josefin Sans', sans-serif; */
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --DarkGray: hsl(0, 0%, 55%);
+    --VeryDarkGray: hsl(0, 0%, 41%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.container {
+    position: relative;
+}
+
+
+/* ===============
+   header 
+   =============== */
+
+.header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding-left: 120px;
+    padding-right: 10%;
+    height: 110px;
+    align-items: center;
+}
+
+
+
+.menu {
+    text-transform: capitalize;
+    align-items: center;
+}
+
+.nav-links-wrapper {
+    display: flex;
+}
+
+
+.menu p {
+    margin-right: 35px;
+    cursor: pointer;
+    color: var(--White);
+
+}
+
+.banner {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(./images/desktop/image-hero.jpg);
+  
+    background-position: center top;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+.menu-btn {
+    visibility: none;
+}
+
+
+.text{
+    border: 1px solid var(--White);
+    box-sizing: border-box;
+    width: fit-content;
+    padding: 40px;
+    color: var(--White);
+    letter-spacing: 5px;
+    margin-left: 120px;
+    margin-top: 100px;
+    font-size: 5rem;
+}
+
+
+
+/* ==========================================
+   section1
+   =============== */
+.section1{
+    display: flex;
+    position: relative;
+}
+.text-of-1{
+    position: absolute;
+    left: 55%;
+    max-width: 780px;
+    bottom: -1px;
+    right: 0%;
+    height: fit-content;
+    background-color: var(--White);
+}
+
+.text-of-1 h1{
+    font-size: 3vw;
+    padding: 90px;
+    padding-bottom: 0;
+    width: 60%;
+}
+
+.text-of-1 p{
+    padding: 90px;
+    padding-top: 40px;
+    padding-bottom: 5px;
+    text-transform: lowercase;
+    font-size: 1.1vw;
+    line-height: 150%;
+    
+    width: 60%;
+
+}
+
+
+.section1 img{
+    width: 60%;
+    margin-left: 140px;
+    margin-top: 140px;
+}
+
+
+/* ======================
+ sec 2
+   =============== */
+.section2{
+    margin-top: 190px;
+    margin-right: 140px;
+    margin-left: 140px;
+}
+.head-of-2{
+    font-size: 2vw;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.head-of-2 button{
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 1.2vw;
+    letter-spacing: .3vw;
+    padding: 5px 30px 5px 30px;
+}
+.main-of-gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+}
+.main-of-gallery div {
+    position: relative;
+}
+.main-of-gallery img{
+    
+    max-width: 100% !important;
+}
+.title{
+    position: absolute;
+    bottom: 100px;
+    left: 10px;
+    padding-right: 10px;
+    color: white;
+    width: 80%;
+    text-shadow: black 1px 0 10px;
+}
+
+
+/* ==========================================
+   section footer
+   =============== */
+
+.section-footer{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 30px 60px;
+}
+.nav-footer{
+    display: flex;
+    padding-top: 30px;
+}
+.nav-footer p{
+    cursor: pointer;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    
+}
+
+.nav-footer p:hover{
+    border-bottom: white 1px solid;
+}
+.nav-footer p:active{
+    opacity: .6;
+}
+
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 40%;
+    padding-bottom: 30px;
+}
+
+.copyright{
+    text-transform: capitalize;
+    opacity: .6;
+}
+
+
+/* ==========================================
+   mobile menu
+   =============== */
+
+@media(max-width: 950px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-btn {
+        border-radius: 100px;
+        display: block;
+        width: 1.6rem;
+        height: 0.2rem;
+        background-color: var(--White);
+        position: relative;
+        transition: 0.25s all ease-in-out;
+    }
+
+    .menu-btn::after {
+        border-radius: 100px;
+        transition: 0.25s all ease-in-out;
+        content: "";
+        position: absolute;
+        background-color: var(--White);
+        left: 0%;
+        right: 0;
+        bottom: -0.5rem;
+        height: 0.2rem;
+
+    }
+
+    .menu-btn::before {
+        border-radius: 100px;
+        transition: 0.25s all ease-in-out;
+        content: "";
+        position: absolute;
+        background-color: var(--White);
+        left: 0%;
+        right: 0;
+        bottom: 0.5rem;
+        height: 0.2rem;
+    }
+
+    .header {
+        padding-left: 0;
+    }
+
+    .header img {
+        z-index: 10;
+        padding-left: 30px;
+        width: 160px;
+    }
+
+    .nav-links-wrapper {
+        width: fit-content;
+        padding-left: 40px;
+        flex-direction: column;
+        padding-top: 55px;
+    }
+
+    .nav-links-wrapper p {
+        padding-bottom: 25px;
+    
+    }
+/* ==========================================
+menu (mobile)
+
+
+
+added by js
+=============== */
+
+
+.menu-btn-open {
+    z-index: 3;
+    transform: rotate(45deg);
+}
+
+.menu-btn-open::before {
+    z-index: 3;
+    transform: rotate(90deg);
+    bottom: 0;
+
+}
+
+.menu-btn-open::after {
+    opacity: 0;
+}
+
+.nav-links-open {
+    top: 0;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    position: absolute;
+    z-index: 2;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.nav-links-open:first-child {
+    padding-top: 300px;
+}
+
+.nav-links-open * {
+    cursor: pointer;
+    padding-bottom: 10px;
+}  
+ /* ===============
+mobile header
+=============== */
+    .text{
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 100px;
+        font-size: 2rem;
+        padding: 20px;
+}
+
+.banner{
+    height: 100vh;
+}
+
+
+
+ /* ===============
+section 1
+=============== */
+.section1{
+    flex-direction: column;
+}
+.text-of-1 *{
+    margin: auto;
+}
+.text-of-1{
+    margin: auto;
+    padding: 0;
+    position: relative;
+    left: 0;
+    
+}
+.text-of-1 p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.2rem;
+}
+.text-of-1 h1{
+    font-size: 3rem;
+    text-align: center;
+}
+.section1 img{
+    width: auto;
+    padding: 5%;
+    margin-top: 100px;
+    margin-left: 0;
+}
+
+/* 
+footer */
+
+.section-footer{
+    flex-direction: column;
+    padding:40px 10px;
+
+}
+.nav-footer{
+    flex-direction: column;
+    width: fit-content;
+    margin:0 auto;
+text-align: center;
+padding-bottom: 30px;
+margin-top: 20px;
+
+}
+
+.nav-footer p{
+    margin-right: 0;
+    padding-bottom: 20px;
+}
+.left-footer img{
+    display: flex;
+    margin: 0 auto;
+}
+.nav-footer p:hover{
+border: none;
+}
+.icons{
+    margin-left: 0;
+    width: 40%;
+    margin:0 auto;
+}
+.copyright{
+    width: 80%;
+    margin:0 auto;
+text-align: center;
+}
+}
+
+@media(max-width: 1080px) {
+    .main-of-gallery{
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .main-of-gallery h1{
+        font-size: 1rem;
+    }
+    .main-of-gallery img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: 100% 0;
+    }
+    .title{
+        left: 40px;
+    }
+    .head-of-2{
+        width: 80vw;
+        margin: 0 auto;
+        margin-bottom: 80px;
+        justify-content: center;
+    }
+    .head-of-2 button{
+        bottom: 0;
+        position: absolute; left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+        width: fit-content;
+    }
+    .head-of-2 h1{
+        font-size: 2rem;
+    }
+    .section2{
+        margin-left: 50px;
+        margin-right: 50px;
+        position: relative;
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 530px) {
+    .text-of-1 h1{
+        font-size: 2rem;
+        padding: 0;
+        padding-top: 50px;
+    }
+    .text-of-1 p{
+        padding: 0;
+        padding-top: 30px;
+        font-size: .7rem;
+    }
+    .main-of-gallery img{
+        height: 100px;
+    }
+    .title{
+        bottom: 25px;
+        left: 20px;
+    }
+}
